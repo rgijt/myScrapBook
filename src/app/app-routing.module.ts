@@ -14,7 +14,10 @@ const routes: Routes = [
   {
     path: 'list',
     loadChildren: './list/list.module#ListPageModule'
-  }
+  },
+  { path: 'login', loadChildren: './pages/public/login/login.module#LoginPageModule' },
+  { path: 'registrate', loadChildren: './pages/public/registrate/registrate.module#RegistratePageModule' },
+  { path: 'forgotpassword', loadChildren: './pages/public/forgotpassword/forgotpassword.module#ForgotpasswordPageModule' }
 ];
 
 @NgModule({
