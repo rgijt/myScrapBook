@@ -1,6 +1,8 @@
 {
   "name": "myScrapBook",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular",
   "id": "28e1d591"
 }
