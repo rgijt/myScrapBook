@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Routes, RouterModule } from '@angular/router';
+
+const routes: Routes = [
+  { path: 'scraplist', loadChildren: './scraplist/scraplist.module#ScraplistPageModule' }
+];
 
 @NgModule({
-  declarations: [],
-  imports: [
-    CommonModule
-  ]
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule]
 })
-export class UserRoutingModule { }
+export class UserRoutingModule {}
