@@ -1,9 +1,13 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>login</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content padding>
-
+  <h1 class="center">myScrapBook</h1>
+  <img id="LoginPageLogo" src="../../../../assets/img/myScrapBookIcon.svg"/>
+  <ion-item>
+    <ion-label position="floating">Email:</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Password:</ion-label>
+    <ion-input type="password"></ion-input>
+  </ion-item>
+  <ion-button (click)="login()" expand="block">Login</ion-button>
 </ion-content>
