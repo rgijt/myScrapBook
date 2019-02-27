@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { NewUser } from '../models/newUser/newUser.interface';
 import { Storage } from '@ionic/storage';
+import { FirebaseAuthentication, FirebaseAuthenticationOriginal } from '@ionic-native/firebase-authentication';
 
 const USER_TOKEN = 'auth-token';
 
@@ -12,14 +13,14 @@ const USER_TOKEN = 'auth-token';
 export class AuthenticationService {
   authenticationState = new BehaviorSubject(false);
 
-  constructor(private storage: Storage, private plt: Platform) {
+  constructor(private storage: Storage, private plt: Platform, private firebaseAuth: FirebaseAuthenticationOriginal) {
     this.plt.ready().then(() => {
       this.checkToken();
     });
    }
 
    CreateNewUser(newUser: NewUser){
-
+    //this.firebaseAuth.createUserWithEmailAndPassword().then();
    }
 
    login() {
